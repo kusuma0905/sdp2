@@ -49,19 +49,25 @@ const Sign = () => {
                 return
             }
             
-            const response = await axios.post('/api/auth/signup', userData)
+            const response = await axios.post('http://localhost:3001/register', userData)
+
+            console.log(response)
             
             if(response.data.status === 200) {
                 // toast.success('Account created successfully')
+                alert('Account created successfully')
             }
             if(response.data.status === 201) {
                 // toast.error('Invalid Username')
+                alert('Invalid Username')
             }
             if(response.data.status === 204) {
                 // toast.error('Invalid year')
+                alert('Invalid year')
             }
             if(response.data.status === 500) {
                 // toast.error('Internal server error')
+                alert('Internal server error')
             }
             
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import axios from 'axios';
 import logo from './images/logo.jpg';
 
 const Login = () => {
@@ -15,9 +16,14 @@ const Login = () => {
         setPassword(e.target.value);
     };
 
-    const handleSubmit = () => {
-        // Add your submission logic here
-        console.log('Submitted');
+    const handleSubmit = async () => {
+         try {
+            const response = await axios.post('http://localhost:3001/login', { email, password });
+            console.log(response);
+            alert('Login successful');
+         } catch (error) {
+            alert('Invalid credentials');
+         }
     };
 
     return (
