@@ -26,6 +26,8 @@ app.post('/register', async (req, res) => {
     try {
         const { firstName, lastName, username, email, gender, password, branch, confirmPassword, phone, address, residence, profile_pic } = req.body;
 
+        const role = 'student';
+
         const existingUser = await User.findOne({ email });
 
         if (existingUser) {
@@ -44,6 +46,7 @@ app.post('/register', async (req, res) => {
             phone,
             address,
             residence,
+            role,
             profile_pic,
         });
 
@@ -67,6 +70,10 @@ app.post('/login', async (req, res) => {
             email,
             password,
         });
+
+        // get role from user and details of the user 
+
+        console.log(existingUser);
 
         if (!existingUser) {
             return res.status(400).json({ message: 'Invalid credentials' });

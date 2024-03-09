@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
     branch: String,
     confirmPassword: String,
     phone: String,
+    role: String,
     address: String,
     residence: String,
     profile_pic: String,

@@ -20,7 +20,17 @@ const Login = () => {
          try {
             const response = await axios.post('http://localhost:3001/login', { email, password });
             console.log(response);
+            
+            if(response.data.user.role === 'student') {
+                window.location.href = '/home';
+            }
+
+            if(response.data.user.role === 'admin') {
+                window.location.href = '/admin';
+            }
+            
             alert('Login successful');
+
          } catch (error) {
             alert('Invalid credentials');
          }

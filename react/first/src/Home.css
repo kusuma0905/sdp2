@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.HomeComponent {
+    width: 100%;
+}
+
+.HomeComponent-in {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.Home-one {
+    width: 20%;
+    background-color: black;
+}
+
+.Home-two {
+    width: 80%;
+}

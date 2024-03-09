@@ -70,9 +70,10 @@ const Sign = () => {
                 alert('Internal server error')
             }
             
-
+            alert('Account created successfully')
         } catch (error) {
             console.log(error)
+            alert('Internal server error')
         }
     }
 
