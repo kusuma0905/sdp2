@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.LoginComponent {
+    height: 100vh;
+}
+
+.LoginComponent-in {
+    width: 40%;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 1rem 0rem;
+}
+
+.LoginHead {
+    padding: 3rem;
+}
+
+.Login-img {
+    width: 100%;
+}
+
+.Login-img img  {
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+}   
+
+.Login-one {
+    width: 90%;
+    margin: auto;
+    padding: .5rem 0rem;
+}
+
+.Login-one input {
+    width: 60%;
+    padding: .5rem;
+}
+
+.Login-two {
+    width: 90%;
+    margin: auto;
+    padding: .5rem 0rem;
+}
+
+.Login-two input {
+    width: 60%;
+    padding: .5rem;
+}
+
+.Login-three {
+    width: 90%;
+    margin: auto;
+    padding: .5rem 0rem;
+}
+
+.Login-three button {
+    width: 60%;
+    padding: .5rem;
+    background-color: blue;
+    border: none;
+    color: white;
+}
+
+.Login-four {
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login-four a {
+    text-decoration: none;
+    color: blue;
+    padding: .5rem;
+}
+
